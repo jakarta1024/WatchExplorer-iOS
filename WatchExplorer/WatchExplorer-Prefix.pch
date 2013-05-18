@@ -11,4 +11,19 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import<CoreData/CoreData.h>
+
+    #ifdef DEBUG
+        #define DebugLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+    #else
+        #define DebugLog(...) do{}while(false)
+    #endif
+
+    #define SMD__SUBCLASS_RESPONSIBILITY  \
+        [NSException raise:@"SubclassResponsibility" \
+                    format:@"Illegal call to abstract superclass implementation at %s", __PRETTY_FUNCTION__];
+    #define SMD__METHOD_NOT_IMPLEMENTED  \ 
+        [NSException raise:@"MethodNotImplemented" \
+                    format:@"Call to empty method implementation at %s", __PRETTY_FUNCTION__];
+
 #endif

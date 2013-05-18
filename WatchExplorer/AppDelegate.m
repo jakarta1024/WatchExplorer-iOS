@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
-#import "ViewController.h"
+#import "AKTabBarController.h"
 
 @implementation AppDelegate
 
@@ -16,8 +15,11 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    _tabBarController = [[AKTabBarController alloc] initWithTabBarHeight:40];
+    _tabBarController.minimumHeightToDisplayTitle = 35;
+    
+    //
+    _window.rootViewController = _tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -47,6 +49,16 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Extension Methods
+
+-(NSURL *)applicationDocumentPath
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *path = [paths objectAtIndex:0];
+    NSURL *documentURL = [NSURL URLWithString:path];
+    return documentURL;
 }
 
 @end
