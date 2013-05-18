@@ -11,6 +11,7 @@
 #import "AFHTTPClient.h"
 
 static NSString * const kAppServiceBaseURLString = @"";
+static NSString * const kAppServiceHostString = @"";
 @implementation AppServiceClient
 
 +(AppServiceClient *)sharedClient
