@@ -6,7 +6,7 @@
 const struct WatchAttributes WatchAttributes = {
 	.brand = @"brand",
 	.commentsCount = @"commentsCount",
-	.desc = @"desc",
+	.descriptionText = @"descriptionText",
 	.imageCount = @"imageCount",
 	.name = @"name",
 	.price = @"price",
@@ -102,7 +102,7 @@ const struct WatchFetchedProperties WatchFetchedProperties = {
 
 
 
-@dynamic desc;
+@dynamic descriptionText;
 
 
 

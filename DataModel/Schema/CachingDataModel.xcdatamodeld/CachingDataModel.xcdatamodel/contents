@@ -8,7 +8,7 @@
     <entity name="Watch" representedClassName="Watch" syncable="YES">
         <attribute name="brand" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="commentsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descriptionText" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imageCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="price" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -40,8 +40,8 @@
         <relationship name="watches" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Watch" inverseName="store" inverseEntity="Watch" syncable="YES"/>
     </entity>
     <elements>
-        <element name="WatchStore" positionX="5067" positionY="-45" width="128" height="358"/>
         <element name="UserInfo" positionX="4705" positionY="-18" width="128" height="90"/>
         <element name="Watch" positionX="4815" positionY="144" width="135" height="178"/>
+        <element name="WatchStore" positionX="5067" positionY="-45" width="128" height="358"/>
     </elements>
 </model>

@@ -7,7 +7,7 @@
 extern const struct WatchAttributes {
 	__unsafe_unretained NSString *brand;
 	__unsafe_unretained NSString *commentsCount;
-	__unsafe_unretained NSString *desc;
+	__unsafe_unretained NSString *descriptionText;
 	__unsafe_unretained NSString *imageCount;
 	__unsafe_unretained NSString *name;
 	__unsafe_unretained NSString *price;
@@ -70,11 +70,11 @@ extern const struct WatchFetchedProperties {
 
 
 
-@property (nonatomic, strong) NSString* desc;
+@property (nonatomic, strong) NSString* descriptionText;
 
 
 
-//- (BOOL)validateDesc:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateDescriptionText:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -170,8 +170,8 @@ extern const struct WatchFetchedProperties {
 
 
 
-- (NSString*)primitiveDesc;
-- (void)setPrimitiveDesc:(NSString*)value;
+- (NSString*)primitiveDescriptionText;
+- (void)setPrimitiveDescriptionText:(NSString*)value;
 
 
 

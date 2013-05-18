@@ -6,7 +6,8 @@
 //  Copyright (c) 2013 Kipp Li. All rights reserved.
 //
 
-#import "ASIHTTPRequest.h"
+#import "AFHTTPRequestOperation.h"
+
 typedef NS_ENUM(NSInteger,WSNetworkRequestType ) {
     InvalidRequest = -1,  //Invalid Request
     RegisterRequest, //!\note User or Mobile register request
@@ -34,7 +35,7 @@ typedef NS_ENUM(NSInteger, WSNetworkRequestPriorLevel) {
     LowLevel,
 };
 
-@interface WSNetworkRequest : ASIHTTPRequest
+@interface WSNetworkRequest : AFHTTPRequestOperation
 @property (nonatomic, assign) WSNetworkRequestPriorLevel priorLevel;
 @property (nonatomic, assign) WSNetworkRequestType requestType;
 
