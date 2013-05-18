@@ -8,16 +8,26 @@
 
 #import "AppDelegate.h"
 #import "AKTabBarController.h"
+#import "HomeViewController.h"
+
+#define THUMBNAIL_CACHE_NAME @"Thumbnails"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
     // Override point for customization after application launch.
     _tabBarController = [[AKTabBarController alloc] initWithTabBarHeight:40];
     _tabBarController.minimumHeightToDisplayTitle = 35;
+    if (nil == _homeViewController) {
+        _homeViewController = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:[NSBundle mainBundle]];
+    }
+    UIViewController *testvc = [[UIViewController alloc] initWithNibName:@"HomeViewController" bundle:[NSBundle mainBundle]];
+    testvc.view.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
     
+    _tabBarController.viewControllers = [NSMutableArray arrayWithArray:@[_homeViewController, testvc]];
     //
     _window.rootViewController = _tabBarController;
     [self.window makeKeyAndVisible];
@@ -53,12 +63,49 @@
 
 #pragma mark - Extension Methods
 
--(NSURL *)applicationDocumentPath
+/**
+ Returns the URL to the application's Documents directory.
+ */
+- (NSURL *)applicationDocumentsDirectory
 {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *path = [paths objectAtIndex:0];
-    NSURL *documentURL = [NSURL URLWithString:path];
-    return documentURL;
+    return [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask][0];
 }
+/**
+ Returns the URL to the application's Support directory.
+ */
+- (NSURL *)applicationSupportDirectory
+{
+    NSURL * returnValue = [[NSFileManager defaultManager] URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask][0];
+    [[NSFileManager defaultManager] createDirectoryAtURL:returnValue withIntermediateDirectories:YES attributes:nil error:nil];
+    return returnValue;
+}
+
+/**
+ Returns the URL to the application's Download directory.
+ */
+- (NSURL *)applicationCachesDirectory
+{
+    NSURL * returnValue = [[NSFileManager defaultManager] URLsForDirectory:NSCachesDirectory inDomains:NSUserDomainMask][0];
+    //    [[NSFileManager defaultManager] createDirectoryAtURL:returnValue withIntermediateDirectories:YES attributes:nil error:nil];
+    return returnValue;
+}
+
+
+/**
+ Returns the URL to the application's Thumbnail directory.
+ */
+- (NSURL *)applicationThumbnailDirectory
+{
+    NSURL* returnValue = [self applicationCachesDirectory];
+    returnValue = [returnValue URLByAppendingPathComponent:THUMBNAIL_CACHE_NAME isDirectory:YES];
+    
+    NSError * error = nil;
+    [[NSFileManager defaultManager] createDirectoryAtURL:returnValue withIntermediateDirectories:YES attributes:nil error:&error];
+    if(error)
+        NSLog(@"Error creating thumbnail directory at %@\n%@", returnValue, error);
+    return returnValue;
+}
+
+
 
 @end

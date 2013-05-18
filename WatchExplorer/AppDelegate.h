@@ -9,14 +9,19 @@
 #import <UIKit/UIKit.h>
 
 @class AKTabBarController;
+@class HomeViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
 @property (strong, nonatomic) AKTabBarController *tabBarController;
 
+//MARK: viewControllers
+@property (strong, nonatomic) HomeViewController *homeViewController;
 
--(NSURL *)applicationDocumentPath;
+- (NSURL *)applicationDocumentsDirectory;
+- (NSURL *)applicationSupportDirectory;
+- (NSURL *)applicationCachesDirectory;
+- (NSURL *)applicationThumbnailDirectory;
 
 @end

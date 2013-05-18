@@ -10,6 +10,4 @@
 
 @implementation Watch
 
-// Custom logic goes here.
-
 @end

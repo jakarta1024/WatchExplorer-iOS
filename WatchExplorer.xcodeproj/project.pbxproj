@@ -66,6 +66,8 @@
 		BB3BE3431747698B00773B16 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3BE33E1747697100773B16 /* UserInfo.m */; };
 		BB3BE3441747698B00773B16 /* Watch.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3BE3401747697700773B16 /* Watch.m */; };
 		BB3BE3451747698B00773B16 /* WatchStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3BE3421747698300773B16 /* WatchStore.m */; };
+		BB3BE34C174775FF00773B16 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3BE34A174775FF00773B16 /* HomeViewController.m */; };
+		BB3BE34D174775FF00773B16 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB3BE34B174775FF00773B16 /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -182,6 +184,9 @@
 		BB3BE3401747697700773B16 /* Watch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Watch.m; path = DataModel/Entities/Watch.m; sourceTree = "<group>"; };
 		BB3BE3411747697B00773B16 /* WatchStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WatchStore.h; path = DataModel/Entities/WatchStore.h; sourceTree = "<group>"; };
 		BB3BE3421747698300773B16 /* WatchStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WatchStore.m; path = DataModel/Entities/WatchStore.m; sourceTree = "<group>"; };
+		BB3BE349174775FF00773B16 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		BB3BE34A174775FF00773B16 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		BB3BE34B174775FF00773B16 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = WatchExplorer/HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,7 +276,7 @@
 		BB3BE2641747483400773B16 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BB3BE28117474A9B00773B16 /* Theme Management */,
+				BB3BE28117474A9B00773B16 /* Theme */,
 				BB3BE28017474A9200773B16 /* Network */,
 				BB3BE27F17474A7E00773B16 /* Views */,
 				BB3BE27E17474A7400773B16 /* ViewControllers */,
@@ -316,6 +321,8 @@
 		BB3BE27E17474A7400773B16 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BB3BE349174775FF00773B16 /* HomeViewController.h */,
+				BB3BE34A174775FF00773B16 /* HomeViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -338,7 +345,7 @@
 			name = Network;
 			sourceTree = "<group>";
 		};
-		BB3BE28117474A9B00773B16 /* Theme Management */ = {
+		BB3BE28117474A9B00773B16 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
 				BB3BE312174757E500773B16 /* WatchExplorerThemeProtocol.h */,
@@ -347,7 +354,7 @@
 				BB3BE3131747582400773B16 /* DefaultTheme.h */,
 				BB3BE3141747582400773B16 /* DefaultTheme.m */,
 			);
-			name = "Theme Management";
+			name = Theme;
 			sourceTree = "<group>";
 		};
 		BB3BE28217474BEA00773B16 /* Reachability */ = {
@@ -444,6 +451,7 @@
 		BB3BE31617475A8800773B16 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				BB3BE34B174775FF00773B16 /* HomeViewController.xib */,
 			);
 			name = Interfaces;
 			sourceTree = "<group>";
@@ -545,6 +553,7 @@
 				BB3BE256174747A600773B16 /* Default@2x.png in Resources */,
 				BB3BE258174747A600773B16 /* Default-568h@2x.png in Resources */,
 				BB3BE2771747487100773B16 /* AKTabBarController.bundle in Resources */,
+				BB3BE34D174775FF00773B16 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +608,7 @@
 				BB3BE3431747698B00773B16 /* UserInfo.m in Sources */,
 				BB3BE3441747698B00773B16 /* Watch.m in Sources */,
 				BB3BE3451747698B00773B16 /* WatchStore.m in Sources */,
+				BB3BE34C174775FF00773B16 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,6 +725,7 @@
 				BB3BE263174747A600773B16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
