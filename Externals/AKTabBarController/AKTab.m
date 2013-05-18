@@ -229,7 +229,7 @@ static const float kTopMargin = 2.0;
             {
                 UIColor *textColor = [UIColor colorWithRed:0.461 green:0.461 blue:0.461 alpha:1.0];
                 CGContextSetFillColorWithColor(ctx, _textColor ? _textColor.CGColor : textColor.CGColor);
-                [tabTitleLabel.text drawInRect:labelRect withFont:tabTitleLabel.font lineBreakMode:NSLineBreakByTruncatingMiddle  alignment:UITextAlignmentCenter];
+                [tabTitleLabel.text drawInRect:labelRect withFont:tabTitleLabel.font lineBreakMode:NSLineBreakByTruncatingMiddle  alignment:NSTextAlignmentCenter];
             }
             CGContextRestoreGState(ctx);
         }
@@ -373,7 +373,7 @@ static const float kTopMargin = 2.0;
             {
                 UIColor *textColor = [UIColor colorWithRed:0.961 green:0.961 blue:0.961 alpha:1.0];
                 CGContextSetFillColorWithColor(ctx, _selectedTextColor ? _selectedTextColor.CGColor : textColor.CGColor);
-                [tabTitleLabel.text drawInRect:labelRect withFont:tabTitleLabel.font lineBreakMode:NSLineBreakByTruncatingMiddle  alignment:UITextAlignmentCenter];
+                [tabTitleLabel.text drawInRect:labelRect withFont:tabTitleLabel.font lineBreakMode:NSLineBreakByTruncatingMiddle  alignment:NSTextAlignmentCenter];
             }
             CGContextRestoreGState(ctx);
         }

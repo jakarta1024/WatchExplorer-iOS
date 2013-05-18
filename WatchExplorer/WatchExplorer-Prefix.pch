@@ -22,7 +22,7 @@
     #define SMD__SUBCLASS_RESPONSIBILITY  \
         [NSException raise:@"SubclassResponsibility" \
                     format:@"Illegal call to abstract superclass implementation at %s", __PRETTY_FUNCTION__];
-    #define SMD__METHOD_NOT_IMPLEMENTED  \ 
+    #define SMD__METHOD_NOT_IMPLEMENTED  \
         [NSException raise:@"MethodNotImplemented" \
                     format:@"Call to empty method implementation at %s", __PRETTY_FUNCTION__];
 
