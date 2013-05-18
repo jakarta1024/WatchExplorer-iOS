@@ -71,7 +71,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BB3BE23E174747A600773B16 /* WatchExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB3BE23E174747A600773B16 /* WatchExpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchExpo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB3BE241174747A600773B16 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BB3BE243174747A600773B16 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BB3BE245174747A600773B16 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -227,7 +227,7 @@
 		BB3BE23F174747A600773B16 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB3BE23E174747A600773B16 /* WatchExplorer.app */,
+				BB3BE23E174747A600773B16 /* WatchExpo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -514,7 +514,7 @@
 			);
 			name = WatchExplorer;
 			productName = WatchExplorer;
-			productReference = BB3BE23E174747A600773B16 /* WatchExplorer.app */;
+			productReference = BB3BE23E174747A600773B16 /* WatchExpo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -689,7 +689,7 @@
 				GCC_PREFIX_HEADER = "WatchExplorer/WatchExplorer-Prefix.pch";
 				HEADER_SEARCH_PATHS = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = "WatchExplorer/WatchExplorer-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WatchExpo;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -701,7 +701,7 @@
 				GCC_PREFIX_HEADER = "WatchExplorer/WatchExplorer-Prefix.pch";
 				HEADER_SEARCH_PATHS = "${SDK_DIR}/usr/include/libxml2";
 				INFOPLIST_FILE = "WatchExplorer/WatchExplorer-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WatchExpo;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
