@@ -1,41 +1,41 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
-// Make changes to UserInfo.m instead.
+// Make changes to User.m instead.
 
-#import "_UserInfo.h"
+#import "_User.h"
 
-const struct UserInfoAttributes UserInfoAttributes = {
+const struct UserAttributes UserAttributes = {
 	.autoRegister = @"autoRegister",
 	.password = @"password",
 	.username = @"username",
 };
 
-const struct UserInfoRelationships UserInfoRelationships = {
+const struct UserRelationships UserRelationships = {
 };
 
-const struct UserInfoFetchedProperties UserInfoFetchedProperties = {
+const struct UserFetchedProperties UserFetchedProperties = {
 };
 
-@implementation UserInfoID
+@implementation UserID
 @end
 
-@implementation _UserInfo
+@implementation _User
 
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_ {
 	NSParameterAssert(moc_);
-	return [NSEntityDescription insertNewObjectForEntityForName:@"UserInfo" inManagedObjectContext:moc_];
+	return [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:moc_];
 }
 
 + (NSString*)entityName {
-	return @"UserInfo";
+	return @"User";
 }
 
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_ {
 	NSParameterAssert(moc_);
-	return [NSEntityDescription entityForName:@"UserInfo" inManagedObjectContext:moc_];
+	return [NSEntityDescription entityForName:@"User" inManagedObjectContext:moc_];
 }
 
-- (UserInfoID*)objectID {
-	return (UserInfoID*)[super objectID];
+- (UserID*)objectID {
+	return (UserID*)[super objectID];
 }
 
 + (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {

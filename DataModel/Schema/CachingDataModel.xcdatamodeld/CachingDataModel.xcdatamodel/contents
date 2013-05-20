@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="UserInfo" representedClassName="UserInfo" syncable="YES">
+    <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="autoRegister" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
@@ -40,7 +40,7 @@
         <relationship name="watches" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Watch" inverseName="store" inverseEntity="Watch" syncable="YES"/>
     </entity>
     <elements>
-        <element name="UserInfo" positionX="4705" positionY="-18" width="128" height="90"/>
+        <element name="User" positionX="4705" positionY="-18" width="128" height="88"/>
         <element name="Watch" positionX="4815" positionY="144" width="135" height="178"/>
         <element name="WatchStore" positionX="5067" positionY="-45" width="128" height="358"/>
     </elements>

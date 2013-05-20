@@ -1,34 +1,34 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
-// Make changes to UserInfo.h instead.
+// Make changes to User.h instead.
 
 #import <CoreData/CoreData.h>
 
 
-extern const struct UserInfoAttributes {
+extern const struct UserAttributes {
 	__unsafe_unretained NSString *autoRegister;
 	__unsafe_unretained NSString *password;
 	__unsafe_unretained NSString *username;
-} UserInfoAttributes;
+} UserAttributes;
 
-extern const struct UserInfoRelationships {
-} UserInfoRelationships;
+extern const struct UserRelationships {
+} UserRelationships;
 
-extern const struct UserInfoFetchedProperties {
-} UserInfoFetchedProperties;
-
-
+extern const struct UserFetchedProperties {
+} UserFetchedProperties;
 
 
 
 
-@interface UserInfoID : NSManagedObjectID {}
+
+
+@interface UserID : NSManagedObjectID {}
 @end
 
-@interface _UserInfo : NSManagedObject {}
+@interface _User : NSManagedObject {}
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
-- (UserInfoID*)objectID;
+- (UserID*)objectID;
 
 
 
@@ -71,11 +71,11 @@ extern const struct UserInfoFetchedProperties {
 
 @end
 
-@interface _UserInfo (CoreDataGeneratedAccessors)
+@interface _User (CoreDataGeneratedAccessors)
 
 @end
 
-@interface _UserInfo (CoreDataGeneratedPrimitiveAccessors)
+@interface _User (CoreDataGeneratedPrimitiveAccessors)
 
 
 - (NSNumber*)primitiveAutoRegister;

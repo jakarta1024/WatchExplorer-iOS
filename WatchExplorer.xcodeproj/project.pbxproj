@@ -29,21 +29,20 @@
 		BB3BE30217474D5200773B16 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3BE30117474D5200773B16 /* libz.dylib */; };
 		BB3BE30617474E0100773B16 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3BE30517474E0100773B16 /* SystemConfiguration.framework */; };
 		BB3BE30817474E2100773B16 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3BE30717474E2100773B16 /* MobileCoreServices.framework */; };
-		BB3BE30B174751CF00773B16 /* WSNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3BE30A174751CF00773B16 /* WSNetworkRequest.m */; };
 		BB3BE3111747579A00773B16 /* WatchExporerThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3BE3101747579A00773B16 /* WatchExporerThemeManager.m */; };
 		BB3BE3151747582400773B16 /* DefaultTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3BE3141747582400773B16 /* DefaultTheme.m */; };
 		BB3BE31817475AD100773B16 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3BE31717475AD100773B16 /* CoreData.framework */; };
 		BB3BE32117475D4400773B16 /* DataModelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3BE32017475D4400773B16 /* DataModelFactory.m */; };
 		BB3BE32417475DA200773B16 /* CachingDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BB3BE32217475DA200773B16 /* CachingDataModel.xcdatamodeld */; };
-		BB3BE32C1747679900773B16 /* _UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3BE3271747679900773B16 /* _UserInfo.m */; };
 		BB3BE32D1747679900773B16 /* _Watch.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3BE3291747679900773B16 /* _Watch.m */; };
 		BB3BE32E1747679900773B16 /* _WatchStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3BE32B1747679900773B16 /* _WatchStore.m */; };
 		BB3BE33C174768A700773B16 /* NSManagedObjectContext+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3BE33B174768A700773B16 /* NSManagedObjectContext+Utilities.m */; };
-		BB3BE3431747698B00773B16 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3BE33E1747697100773B16 /* UserInfo.m */; };
 		BB3BE3441747698B00773B16 /* Watch.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3BE3401747697700773B16 /* Watch.m */; };
 		BB3BE3451747698B00773B16 /* WatchStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3BE3421747698300773B16 /* WatchStore.m */; };
 		BB3BE34C174775FF00773B16 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3BE34A174775FF00773B16 /* HomeViewController.m */; };
 		BB3BE34D174775FF00773B16 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB3BE34B174775FF00773B16 /* HomeViewController.xib */; };
+		BB6D9011174A79430078D5B1 /* _User.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6D9010174A79430078D5B1 /* _User.m */; };
+		BB6D9014174A794D0078D5B1 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6D9013174A794D0078D5B1 /* User.m */; };
 		BBBDFF2E17478A09008498DE /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBDFF1C17478A09008498DE /* AFHTTPClient.m */; };
 		BBBDFF2F17478A09008498DE /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBDFF1E17478A09008498DE /* AFHTTPRequestOperation.m */; };
 		BBBDFF3017478A09008498DE /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBDFF2017478A09008498DE /* AFImageRequestOperation.m */; };
@@ -53,7 +52,7 @@
 		BBBDFF3417478A09008498DE /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBDFF2917478A09008498DE /* AFURLConnectionOperation.m */; };
 		BBBDFF3517478A09008498DE /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBDFF2B17478A09008498DE /* AFXMLRequestOperation.m */; };
 		BBBDFF3617478A09008498DE /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBDFF2D17478A09008498DE /* UIImageView+AFNetworking.m */; };
-		BBBDFF391747D34E008498DE /* AppServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBDFF381747D34E008498DE /* AppServiceClient.m */; };
+		BBBDFF391747D34E008498DE /* WatchExplorerHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBDFF381747D34E008498DE /* WatchExplorerHTTPClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,8 +90,6 @@
 		BB3BE30117474D5200773B16 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BB3BE30517474E0100773B16 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BB3BE30717474E2100773B16 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		BB3BE309174751CF00773B16 /* WSNetworkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSNetworkRequest.h; sourceTree = "<group>"; };
-		BB3BE30A174751CF00773B16 /* WSNetworkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSNetworkRequest.m; sourceTree = "<group>"; };
 		BB3BE30F1747579A00773B16 /* WatchExporerThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchExporerThemeManager.h; sourceTree = "<group>"; };
 		BB3BE3101747579A00773B16 /* WatchExporerThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchExporerThemeManager.m; sourceTree = "<group>"; };
 		BB3BE312174757E500773B16 /* WatchExplorerThemeProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WatchExplorerThemeProtocol.h; sourceTree = "<group>"; };
@@ -103,8 +100,6 @@
 		BB3BE32017475D4400773B16 /* DataModelFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataModelFactory.m; path = DataModel/DataModelFactory.m; sourceTree = "<group>"; };
 		BB3BE32317475DA200773B16 /* CachingDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CachingDataModel.xcdatamodel; sourceTree = "<group>"; };
 		BB3BE3251747621500773B16 /* genmodel.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = genmodel.sh; sourceTree = "<group>"; };
-		BB3BE3261747679900773B16 /* _UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _UserInfo.h; path = DataModel/Generated/_UserInfo.h; sourceTree = "<group>"; };
-		BB3BE3271747679900773B16 /* _UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _UserInfo.m; path = DataModel/Generated/_UserInfo.m; sourceTree = "<group>"; };
 		BB3BE3281747679900773B16 /* _Watch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Watch.h; path = DataModel/Generated/_Watch.h; sourceTree = "<group>"; };
 		BB3BE3291747679900773B16 /* _Watch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Watch.m; path = DataModel/Generated/_Watch.m; sourceTree = "<group>"; };
 		BB3BE32A1747679900773B16 /* _WatchStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _WatchStore.h; path = DataModel/Generated/_WatchStore.h; sourceTree = "<group>"; };
@@ -112,8 +107,6 @@
 		BB3BE338174767B600773B16 /* CachingDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CachingDataModel.h; path = DataModel/CachingDataModel.h; sourceTree = "<group>"; };
 		BB3BE33A174768A700773B16 /* NSManagedObjectContext+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObjectContext+Utilities.h"; path = "WatchExplorer/NSManagedObjectContext+Utilities.h"; sourceTree = "<group>"; };
 		BB3BE33B174768A700773B16 /* NSManagedObjectContext+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+Utilities.m"; path = "WatchExplorer/NSManagedObjectContext+Utilities.m"; sourceTree = "<group>"; };
-		BB3BE33D1747697000773B16 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfo.h; path = DataModel/Entities/UserInfo.h; sourceTree = "<group>"; };
-		BB3BE33E1747697100773B16 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfo.m; path = DataModel/Entities/UserInfo.m; sourceTree = "<group>"; };
 		BB3BE33F1747697300773B16 /* Watch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Watch.h; path = DataModel/Entities/Watch.h; sourceTree = "<group>"; };
 		BB3BE3401747697700773B16 /* Watch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Watch.m; path = DataModel/Entities/Watch.m; sourceTree = "<group>"; };
 		BB3BE3411747697B00773B16 /* WatchStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WatchStore.h; path = DataModel/Entities/WatchStore.h; sourceTree = "<group>"; };
@@ -121,6 +114,10 @@
 		BB3BE349174775FF00773B16 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		BB3BE34A174775FF00773B16 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		BB3BE34B174775FF00773B16 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = WatchExplorer/HomeViewController.xib; sourceTree = "<group>"; };
+		BB6D900F174A79430078D5B1 /* _User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _User.h; path = DataModel/Generated/_User.h; sourceTree = "<group>"; };
+		BB6D9010174A79430078D5B1 /* _User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _User.m; path = DataModel/Generated/_User.m; sourceTree = "<group>"; };
+		BB6D9012174A794D0078D5B1 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = DataModel/Entities/User.h; sourceTree = "<group>"; };
+		BB6D9013174A794D0078D5B1 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = DataModel/Entities/User.m; sourceTree = "<group>"; };
 		BBBDFF1B17478A09008498DE /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		BBBDFF1C17478A09008498DE /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		BBBDFF1D17478A09008498DE /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -140,8 +137,8 @@
 		BBBDFF2B17478A09008498DE /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		BBBDFF2C17478A09008498DE /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		BBBDFF2D17478A09008498DE /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		BBBDFF371747D34E008498DE /* AppServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppServiceClient.h; sourceTree = "<group>"; };
-		BBBDFF381747D34E008498DE /* AppServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppServiceClient.m; sourceTree = "<group>"; };
+		BBBDFF371747D34E008498DE /* WatchExplorerHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchExplorerHTTPClient.h; sourceTree = "<group>"; };
+		BBBDFF381747D34E008498DE /* WatchExplorerHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchExplorerHTTPClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,10 +287,8 @@
 		BB3BE28017474A9200773B16 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				BB3BE309174751CF00773B16 /* WSNetworkRequest.h */,
-				BB3BE30A174751CF00773B16 /* WSNetworkRequest.m */,
-				BBBDFF371747D34E008498DE /* AppServiceClient.h */,
-				BBBDFF381747D34E008498DE /* AppServiceClient.m */,
+				BBBDFF371747D34E008498DE /* WatchExplorerHTTPClient.h */,
+				BBBDFF381747D34E008498DE /* WatchExplorerHTTPClient.m */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -331,8 +326,8 @@
 		BB3BE31917475C0900773B16 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				BB3BE33D1747697000773B16 /* UserInfo.h */,
-				BB3BE33E1747697100773B16 /* UserInfo.m */,
+				BB6D9012174A794D0078D5B1 /* User.h */,
+				BB6D9013174A794D0078D5B1 /* User.m */,
 				BB3BE33F1747697300773B16 /* Watch.h */,
 				BB3BE3401747697700773B16 /* Watch.m */,
 				BB3BE3411747697B00773B16 /* WatchStore.h */,
@@ -350,8 +345,8 @@
 		BB3BE31D17475C8E00773B16 /* Generated:DO NOT EDIT THESE */ = {
 			isa = PBXGroup;
 			children = (
-				BB3BE3261747679900773B16 /* _UserInfo.h */,
-				BB3BE3271747679900773B16 /* _UserInfo.m */,
+				BB6D900F174A79430078D5B1 /* _User.h */,
+				BB6D9010174A79430078D5B1 /* _User.m */,
 				BB3BE3281747679900773B16 /* _Watch.h */,
 				BB3BE3291747679900773B16 /* _Watch.m */,
 				BB3BE32A1747679900773B16 /* _WatchStore.h */,
@@ -472,16 +467,13 @@
 				BB3BE27A1747487100773B16 /* UINavigationController+AKTabBarController.m in Sources */,
 				BB3BE27B1747487100773B16 /* UIViewController+AKTabBarController.m in Sources */,
 				BB3BE28517474BEB00773B16 /* Reachability.m in Sources */,
-				BB3BE30B174751CF00773B16 /* WSNetworkRequest.m in Sources */,
 				BB3BE3111747579A00773B16 /* WatchExporerThemeManager.m in Sources */,
 				BB3BE3151747582400773B16 /* DefaultTheme.m in Sources */,
 				BB3BE32117475D4400773B16 /* DataModelFactory.m in Sources */,
 				BB3BE32417475DA200773B16 /* CachingDataModel.xcdatamodeld in Sources */,
-				BB3BE32C1747679900773B16 /* _UserInfo.m in Sources */,
 				BB3BE32D1747679900773B16 /* _Watch.m in Sources */,
 				BB3BE32E1747679900773B16 /* _WatchStore.m in Sources */,
 				BB3BE33C174768A700773B16 /* NSManagedObjectContext+Utilities.m in Sources */,
-				BB3BE3431747698B00773B16 /* UserInfo.m in Sources */,
 				BB3BE3441747698B00773B16 /* Watch.m in Sources */,
 				BB3BE3451747698B00773B16 /* WatchStore.m in Sources */,
 				BB3BE34C174775FF00773B16 /* HomeViewController.m in Sources */,
@@ -494,7 +486,9 @@
 				BBBDFF3417478A09008498DE /* AFURLConnectionOperation.m in Sources */,
 				BBBDFF3517478A09008498DE /* AFXMLRequestOperation.m in Sources */,
 				BBBDFF3617478A09008498DE /* UIImageView+AFNetworking.m in Sources */,
-				BBBDFF391747D34E008498DE /* AppServiceClient.m in Sources */,
+				BBBDFF391747D34E008498DE /* WatchExplorerHTTPClient.m in Sources */,
+				BB6D9011174A79430078D5B1 /* _User.m in Sources */,
+				BB6D9014174A794D0078D5B1 /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
