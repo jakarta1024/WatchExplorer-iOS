@@ -1,5 +1,5 @@
 //
-//  WatchExplorerHTTPClient.h
+//  NetworkClient.h
 //  WatchExplorer
 //
 //  Created by Kipp Li on 5/18/13.
@@ -26,19 +26,19 @@ typedef NS_ENUM(NSInteger,RequestType ) {
     GetStoreListRequest
 };
 
-@class WatchExplorerHTTPClient;
-@protocol WatchExplorerHTTPClientDelegate <NSObject>
+@class NetworkClient;
+@protocol NetworkClientDelegate <NSObject>
 @optional
--(void)HTTPClient:(WatchExplorerHTTPClient *)client didRecieveResponse:(id)responseData forType:(RequestType)type;
--(void)HTTPClient:(WatchExplorerHTTPClient *)client didFail:(NSError *)error forType:(RequestType)type;
+-(void)HTTPClient:(NetworkClient *)client didRecieveResponse:(id)responseData forType:(RequestType)type;
+-(void)HTTPClient:(NetworkClient *)client didFail:(NSError *)error forType:(RequestType)type;
 
 @end
 
-@interface WatchExplorerHTTPClient : AFHTTPClient
+@interface NetworkClient : AFHTTPClient
 
-@property (nonatomic, weak)id<WatchExplorerHTTPClientDelegate> delegate;
+@property (nonatomic, weak)id<NetworkClientDelegate> delegate;
 
-+(WatchExplorerHTTPClient *)sharedInstance;
++(NetworkClient *)sharedInstance;
 
 -(void)sendRequestWithParameters:(id) parameters type:(RequestType) type;
 

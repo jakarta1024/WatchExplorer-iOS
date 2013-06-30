@@ -32,7 +32,7 @@ typedef NS_ENUM(NSUInteger, WEThemeLabel) {
 
 //!@}
 
-@protocol WatchExplorerThemeProtocol <NSObject>
+@protocol ThemeProtocol <NSObject>
 
 @end
 

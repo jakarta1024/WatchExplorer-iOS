@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "WatchExplorerThemeProtocol.h"
+#import "ThemeProtocol.h"
 
-@interface DefaultTheme : NSObject <WatchExplorerThemeProtocol>
+@interface DefaultTheme : NSObject <ThemeProtocol>
 
 @end

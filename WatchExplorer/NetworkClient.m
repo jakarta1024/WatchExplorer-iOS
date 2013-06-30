@@ -1,12 +1,12 @@
 //
-//  WatchExplorerHTTPClient.m
+//  NetworkClient.m
 //  WatchExplorer
 //
 //  Created by Kipp Li on 5/18/13.
 //  Copyright (c) 2013 Kipp Li. All rights reserved.
 //
 
-#import "WatchExplorerHTTPClient.h"
+#import "NetworkClient.h"
 #import "AFJSONRequestOperation.h"
 #import "AFHTTPClient.h"
 
@@ -24,14 +24,14 @@ typedef NS_ENUM(NSInteger, HTTPMethodType) {
 };
 
 
-@implementation WatchExplorerHTTPClient
+@implementation NetworkClient
 
-+(WatchExplorerHTTPClient *)sharedInstance
++(NetworkClient *)sharedInstance
 {
-    static WatchExplorerHTTPClient *__sharedClient = nil;
+    static NetworkClient *__sharedClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        __sharedClient = [[WatchExplorerHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:kAppServiceBaseURLString ]];
+        __sharedClient = [[NetworkClient alloc] initWithBaseURL:[NSURL URLWithString:kAppServiceBaseURLString ]];
     });
     return __sharedClient;
 }

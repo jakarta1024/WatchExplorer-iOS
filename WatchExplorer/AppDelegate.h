@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class AKTabBarController;
-@class HomeViewController;
+@class NewsViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -17,7 +17,7 @@
 @property (strong, nonatomic) AKTabBarController *tabBarController;
 
 //MARK: viewControllers
-@property (strong, nonatomic) HomeViewController *homeViewController;
+@property (strong, nonatomic) NewsViewController *newsViewController;
 
 - (NSURL *)applicationDocumentsDirectory;
 - (NSURL *)applicationSupportDirectory;

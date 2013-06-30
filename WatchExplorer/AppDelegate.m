@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AKTabBarController.h"
-#import "HomeViewController.h"
+#import "NewsViewController.h"
 
 #define THUMBNAIL_CACHE_NAME @"Thumbnails"
 
@@ -22,13 +22,13 @@
     // Override point for customization after application launch.
     _tabBarController = [[AKTabBarController alloc] initWithTabBarHeight:40];
     _tabBarController.minimumHeightToDisplayTitle = 35;
-    if (nil == _homeViewController) {
-        _homeViewController = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:[NSBundle mainBundle]];
+    if (nil == _newsViewController) {
+        _newsViewController = [[NewsViewController alloc] initWithNibName:@"HomeViewController" bundle:[NSBundle mainBundle]];
     }
     UIViewController *testvc = [[UIViewController alloc] initWithNibName:@"HomeViewController" bundle:[NSBundle mainBundle]];
     testvc.view.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
     
-    _tabBarController.viewControllers = [NSMutableArray arrayWithArray:@[_homeViewController, testvc]];
+    _tabBarController.viewControllers = [NSMutableArray arrayWithArray:@[_newsViewController, testvc]];
     //
     _window.rootViewController = _tabBarController;
     [self.window makeKeyAndVisible];

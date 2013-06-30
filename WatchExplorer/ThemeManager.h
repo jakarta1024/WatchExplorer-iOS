@@ -1,5 +1,5 @@
 //
-//  WatchExporerThemeManager.h
+//  ThemeManager.h
 //  WatchExplorer
 //
 //  Created by Kipp Li on 5/18/13.
@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "WatchExplorerThemeProtocol.h"
+#import "ThemeProtocol.h"
 
-@interface WatchExporerThemeManager : NSObject
+@interface ThemeManager : NSObject
 
-+(id<WatchExplorerThemeProtocol>)currentTheme;
++(id<ThemeProtocol>)currentTheme;
 
 +(void)customizeAppAppearence;
 +(void)customizeButton:(UIButton *)button forType:(WEThemeButton)buttonType;

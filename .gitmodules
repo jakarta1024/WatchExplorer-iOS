@@ -1,0 +1,6 @@
+[submodule "Externals/TapkuLibrary"]
+	path = Externals/TapkuLibrary
+	url = git@github.com:devinross/tapkulibrary.git
+[submodule "Externals/UIGlossyButton"]
+	path = Externals/UIGlossyButton
+	url = git@github.com:waterlou/UIGlossyButton.git
