@@ -29,9 +29,8 @@
 {
     self = [super init];
     if (self) {
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"watchId = %@", watchId];
-        self.data = (Watch *)[[DataModelFactory sharedInstance] getObjectOfClass:[Watch class]
-                                                                       predicate:predicate];
+        NSManagedObjectContext *context = [[DataModelFactory sharedInstance] managedObjectContext];
+        self.data = (Watch *)[context objectForEntityName:[Watch entityName] matchingKey:@"watchIdentifier" andValue:watchId];
     }
     return self;
 }
