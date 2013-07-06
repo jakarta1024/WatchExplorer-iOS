@@ -10,7 +10,7 @@
 #import "WatchListCell.h"
 #import "SuggestionView.h"
 #import "WatchDetailViewController.h"
-#import "CachingDataModel.h"
+#import "DataModel.h"
 #import "Watch.h"
 
 // size
@@ -45,7 +45,7 @@
     self = [super init];
     if (self) {
         // read data from core data
-//        NSArray *watchDatas = [[BSCoreDataManager sharedManager] getAllObjectOfClass:[Watch class]];
+//        NSArray *watchDatas = [[DataModelFactory sharedInstance] getAllObjectOfClass:[Watch class]];
 //        self.datas = [NSArray arrayWithArray:watchDatas];
     }
     return self;

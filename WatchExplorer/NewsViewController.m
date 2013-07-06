@@ -15,6 +15,7 @@
 #import "NewsViewImageCell.h"
 //#import "UIImageView+WebCache.h"
 //#import "EGOCache.h"
+#import "ASIHTTPRequest.h"
 
 // size
 #define kTableViewCellHeight 44
@@ -84,8 +85,8 @@
 }
 
 - (void)loadCacheData {
-    NSArray *newslist = (NSArray *)[[EGOCache globalCache] objectForKey:@"newslist"];
-    self.newsDatas = newslist;
+    //NSArray *newslist = (NSArray *)[[EGOCache globalCache] objectForKey:@"newslist"];
+    self.newsDatas = @[@""];
     [self.newsTableView reloadData];
     [self.imageTableView reloadData];
     
@@ -95,41 +96,41 @@
 }
 
 - (void)loadData {
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [[HttpRequestManager sharedManager] getNewsList:self
-                                          finishSel:@selector(getNewsListFinish:)
-                                            failSel:@selector(getNewsListFail:)];
+//    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//    [[HttpRequestManager sharedManager] getNewsList:self
+//                                          finishSel:@selector(getNewsListFinish:)
+//                                            failSel:@selector(getNewsListFail:)];
 }
 
 - (void)getNewsListFinish:(ASIHTTPRequest *)request {
     NSString *responseString = [request responseString];
     NSLog(@"getNewsListFinish : %@", responseString);
     
-    SBJsonParser *parser = [[SBJsonParser alloc] init];
-    id results = [parser objectWithString:responseString];
-    NSLog(@"results : %@", results);
-    
-    NSString *returnCode = [results objectForKey:@"returnCode"];
-    if ([returnCode isEqualToString:@"1"]) {
-        NSArray *newslist = [[results objectForKey:@"outputData"] objectForKey:@"newslist"];
-        [[EGOCache globalCache] setObject:newslist forKey:@"newslist"];
-        
-        self.newsDatas = newslist;
+//    SBJsonParser *parser = [[SBJsonParser alloc] init];
+//    id results = [parser objectWithString:responseString];
+//    NSLog(@"results : %@", results);
+//    
+//    NSString *returnCode = [results objectForKey:@"returnCode"];
+//    if ([returnCode isEqualToString:@"1"]) {
+//        NSArray *newslist = [[results objectForKey:@"outputData"] objectForKey:@"newslist"];
+//        [[EGOCache globalCache] setObject:newslist forKey:@"newslist"];
+//        
+//        self.newsDatas = newslist;
         [self.newsTableView reloadData];
         [self.imageTableView reloadData];
         
         [self.newsTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]
                                         animated:NO
                                   scrollPosition:UITableViewScrollPositionNone];
-    }
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
+//    }
+//    [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
 - (void)getNewsListFail:(ASIHTTPRequest *)request {
     NSError *error = [request error];
     NSLog(@"getNewsListFail : %@", [error description]);
     
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
+//    [MBProgressHUD hideHUDForView:self.view animated:YES];
     [[TKAlertCenter defaultCenter] postAlertWithMessage:@"网络连接失败"];
 }
 
@@ -149,8 +150,8 @@
                                        reuseIdentifier:NewsViewControllerNewsCellid];
         }
         
-        cell.text1.text = [data objectForKey:@"title"];
-        cell.text2.text = [data objectForKey:@"name"];
+        cell.text1.text = @"title";//[data objectForKey:@"title"];
+        cell.text2.text = @"name";//[data objectForKey:@"name"];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         
         return cell;
@@ -164,7 +165,7 @@
         }
         
         NSDictionary *data = [self.newsDatas objectAtIndex:[indexPath row]%[self.newsDatas count]];
-        [cell.image setImageWithURL:[NSURL URLWithString:[data objectForKey:@"thumbnailURL"]]];        
+        [cell.image setImageWithURL:[NSURL URLWithString:@""]];        //[data objectForKey:@"thumbnailURL"]
         
         return cell;
     }
@@ -184,7 +185,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NewsDetailViewController *controller = [[NewsDetailViewController alloc] init];
     
-    TKLog(@"%@", self.navigationController);
     [self.navigationController pushViewController:controller
                                          animated:YES];
 }

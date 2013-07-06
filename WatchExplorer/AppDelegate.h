@@ -24,4 +24,6 @@
 - (NSURL *)applicationCachesDirectory;
 - (NSURL *)applicationThumbnailDirectory;
 
++ (instancetype)applicationDelegate;
+
 @end

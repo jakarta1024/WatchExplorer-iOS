@@ -13,8 +13,9 @@
 #import "Watch.h"
 //#import "BSCoreDataManager.h"
 //#import "HttpRequestManager.h"
-#import "CachingDataModel.h"
+#import "DataModel.h"
 #import "NetworkClient.h"
+#import "ASIHTTPRequest.h"
 
 @interface WatchDetailViewController ()
 
@@ -36,28 +37,28 @@
 }
 
 - (void)getWatchInfoFinish:(ASIHTTPRequest *)request {
-    NSString *responseString = [request responseString];
-    NSLog(@"getWatchInfoFinish : %@", responseString);
-    
-    SBJsonParser *parser = [[SBJsonParser alloc] init];
-    id results = [parser objectWithString:responseString];
-    NSLog(@"results : %@", results);
-    
-    NSString *returnCode = [results objectForKey:@"returnCode"];
-    if ([returnCode isEqualToString:@"1"]) {
-        NSDictionary *info = [results objectForKey:@"outputData"];
-        self.data.commentsCountValue = [[info objectForKey:@"totalCommentsNum"] intValue];
-        [[BSCoreDataManager sharedManager] saveContext];
-        
-        [self.tableView reloadData];
-    }
+//    NSString *responseString = [request responseString];
+//    NSLog(@"getWatchInfoFinish : %@", responseString);
+//    
+//    SBJsonParser *parser = [[SBJsonParser alloc] init];
+//    id results = [parser objectWithString:responseString];
+//    NSLog(@"results : %@", results);
+//    
+//    NSString *returnCode = [results objectForKey:@"returnCode"];
+//    if ([returnCode isEqualToString:@"1"]) {
+//        NSDictionary *info = [results objectForKey:@"outputData"];
+//        self.data.commentsCountValue = [[info objectForKey:@"totalCommentsNum"] intValue];
+//        [[DataModelFactory sharedInstance] saveContext];
+//        
+//        [self.tableView reloadData];
+//    }
 }
 
 - (void)getWatchInfoFail:(ASIHTTPRequest *)request {
-    NSError *error = [request error];
-    NSLog(@"getWatchInfoFail : %@", [error description]);
-    
-    [[TKAlertCenter defaultCenter] postAlertWithMessage:@"网络连接失败"];
+//    NSError *error = [request error];
+//    NSLog(@"getWatchInfoFail : %@", [error description]);
+//    
+//    [[TKAlertCenter defaultCenter] postAlertWithMessage:@"网络连接失败"];
 }
 
 - (void)viewDidLoad
@@ -66,17 +67,17 @@
 	// Do any additional setup after loading the view.
     self.title = self.data.name;
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - kTitlebarHeight- kTabBarHeight)];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - kTitleBarHeight- kTabBarHeight)];
     [self.view addSubview:self.tableView];
     self.tableView.backgroundColor = [UIColor blackColor];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
     // get watch
-    [[HttpRequestManager sharedManager] getWatchInfo:self.data.watchId
-                                            delegate:self
-                                           finishSel:@selector(getWatchInfoFinish:)
-                                             failSel:@selector(getWatchInfoFail:)];
+//    [[HttpRequestManager sharedManager] getWatchInfo:self.data.watchId
+//                                            delegate:self
+//                                           finishSel:@selector(getWatchInfoFinish:)
+//                                             failSel:@selector(getWatchInfoFail:)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -107,7 +108,7 @@
                                                            reuseIdentifier:nil];
             cell.textLabel.text = @"评论";
             cell.textLabel.textColor = [UIColor whiteColor];
-            cell.detailTextLabel.text = [NSString stringWithFormat:@"（共%@条）", self.data.commentsNum];
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"（共%@条）", self.data.commentsCount];
             cell.detailTextLabel.textColor = [UIColor whiteColor];
             
             UIImageView *accessary = [[UIImageView alloc] initWithFrame:CGRectMake(300, 14, 15, 15)];

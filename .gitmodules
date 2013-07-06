@@ -4,3 +4,6 @@
 [submodule "Externals/UIGlossyButton"]
 	path = Externals/UIGlossyButton
 	url = git@github.com:waterlou/UIGlossyButton.git
+[submodule "Externals/ASIHTTPRequest"]
+	path = Externals/ASIHTTPRequest
+	url = git@github.com:pokeb/asi-http-request.git

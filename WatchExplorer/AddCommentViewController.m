@@ -16,6 +16,9 @@
 #import "TKAlertCenter.h"
 //#import "MBProgressHUD.h"
 
+#import "ASIHTTPRequest.h"
+
+
 @interface AddCommentViewController ()
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -42,7 +45,7 @@
 	// Do any additional setup after loading the view.
     self.title = @"添加评论";
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - kTitleBarHeight- kTabbarHeight)];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - kTitleBarHeight- kTabBarHeight)];
     [self.view addSubview:self.tableView];
     self.tableView.backgroundColor = [UIColor blackColor];
     self.tableView.dataSource = self;
@@ -86,29 +89,29 @@
         text = self.textView.text;
     }
     
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [[HttpRequestManager sharedManager] addComment:@"1002"
+    //[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    /*[[HttpRequestManager sharedManager] addComment:@"1002"
                                               text:text
                                          totalRate:self.starsView.show_star
                                       prospectRate:0
                                           delegate:self
                                          finishSel:@selector(sendCommentFinish:)
-                                           failSel:@selector(sendCommentFail:)];
+                                           failSel:@selector(sendCommentFail:)];*/
 }
 
 - (void)sendCommentFinish:(ASIHTTPRequest *)request {
     NSString *responseString = [request responseString];
     NSLog(@"sendCommentFinish : %@", responseString);
     
-    SBJsonParser *parser = [[SBJsonParser alloc] init];
-    id results = [parser objectWithString:responseString];
-    NSLog(@"results : %@", results);
-    
-    NSString *returnCode = [results objectForKey:@"returnCode"];
-    if ([returnCode isEqualToString:@"1"]) {
-        
-    }
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
+//    SBJsonParser *parser = [[SBJsonParser alloc] init];
+//    id results = [parser objectWithString:responseString];
+//    NSLog(@"results : %@", results);
+//    
+//    NSString *returnCode = [results objectForKey:@"returnCode"];
+//    if ([returnCode isEqualToString:@"1"]) {
+//        
+//    }
+//    [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
 - (void)sendCommentFail:(ASIHTTPRequest *)request {
@@ -116,7 +119,7 @@
     NSLog(@"sendCommentFail : %@", [error description]);
     
     [[TKAlertCenter defaultCenter] postAlertWithMessage:@"网络连接失败"];
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
+//    [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
 #pragma mark - UITableViewDataSource
@@ -230,8 +233,10 @@
                                              destructiveButtonTitle:nil
                                                   otherButtonTitles:@"非常好（4）", @"很好（3）", @"好（2）", @"一般（1）", @"差（0）", nil];
         sheet.tag = 0;
-        [sheet showFromTabBar:[(AppDelegate *)[UIApplication sharedApplication].delegate viewController].bar];
-
+        AppDelegate *appDelegate = [AppDelegate applicationDelegate];
+        
+        [sheet showFromRect:appDelegate.tabBarController.view.frame inView:appDelegate.window.rootViewController.view animated:YES];
+//        [sheet showFromTabBar:[(AppDelegate *)[UIApplication sharedApplication].delegate viewController].bar];
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

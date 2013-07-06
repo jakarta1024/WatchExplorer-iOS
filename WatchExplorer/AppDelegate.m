@@ -107,6 +107,11 @@
     return returnValue;
 }
 
++ (instancetype)applicationDelegate
+{
+    return [[UIApplication sharedApplication] delegate];
+}
+
 
 
 @end

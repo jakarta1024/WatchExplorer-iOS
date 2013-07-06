@@ -9,6 +9,7 @@
 #import "CommentListViewController.h"
 //#import "HttpRequestManager.h"
 #import "NetworkClient.h"
+#import "ASIHTTPRequest.h"
 
 @interface CommentListViewController ()
 
@@ -38,7 +39,7 @@
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0,
                                                                    0,
                                                                    kScreenWidth,
-                                                                   kScreenHeight - kTitlebarHeight - kTabbarHeight)];
+                                                                   kScreenHeight - kTitleBarHeight - kTabBarHeight)];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
@@ -56,44 +57,44 @@
 }
 
 - (void)loadCacheData {
-    NSArray *commentList = (NSArray *)[[EGOCache globalCache] objectForKey:@"commentList"];
-    self.datas = commentList;
-    [self.tableView reloadData];
+//    NSArray *commentList = (NSArray *)[[EGOCache globalCache] objectForKey:@"commentList"];
+//    self.datas = commentList;
+//    [self.tableView reloadData];
 }
 
 - (void)loadData{
-    [[HttpRequestManager sharedManager] getCommentList:@"1"
-                                              delegate:self
-                                             finishSel:@selector(getCommentListFinish:)
-                                               failSel:@selector(getCommentListFail:)];
+//    [[HttpRequestManager sharedManager] getCommentList:@"1"
+//                                              delegate:self
+//                                             finishSel:@selector(getCommentListFinish:)
+//                                               failSel:@selector(getCommentListFail:)];
 }
 
 - (void)getCommentListFinish:(ASIHTTPRequest *)request {
-    NSString *responseString = [request responseString];
-    NSLog(@"getCommentListFinish : %@", responseString);
-    
-    SBJsonParser *parser = [[SBJsonParser alloc] init];
-    id results = [parser objectWithString:responseString];
-    NSLog(@"results : %@", results);
-    
-    NSString *returnCode = [results objectForKey:@"returnCode"];
-    if ([returnCode isEqualToString:@"1"]) {
-        NSArray *commentList = [[results objectForKey:@"outputData"] objectForKey:@"comments"];
-        [[EGOCache globalCache] setObject:commentList forKey:@"commentList"];
-        
-        self.datas = commentList;
-        [self.tableView reloadData];
-    }
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;    
+//    NSString *responseString = [request responseString];
+//    NSLog(@"getCommentListFinish : %@", responseString);
+//    
+//    SBJsonParser *parser = [[SBJsonParser alloc] init];
+//    id results = [parser objectWithString:responseString];
+//    NSLog(@"results : %@", results);
+//    
+//    NSString *returnCode = [results objectForKey:@"returnCode"];
+//    if ([returnCode isEqualToString:@"1"]) {
+//        NSArray *commentList = [[results objectForKey:@"outputData"] objectForKey:@"comments"];
+//        [[EGOCache globalCache] setObject:commentList forKey:@"commentList"];
+//        
+//        self.datas = commentList;
+//        [self.tableView reloadData];
+//    }
+//    [MBProgressHUD hideHUDForView:self.view animated:YES];
+//    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;    
 }
 
 - (void)getCommentListFail:(ASIHTTPRequest *)request {
-    NSError *error = [request error];
-    NSLog(@"getCommentListFail : %@", [error description]);
-    
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
-    [[TKAlertCenter defaultCenter] postAlertWithMessage:@"网络连接失败"];
+//    NSError *error = [request error];
+//    NSLog(@"getCommentListFail : %@", [error description]);
+//    
+//    [MBProgressHUD hideHUDForView:self.view animated:YES];
+//    [[TKAlertCenter defaultCenter] postAlertWithMessage:@"网络连接失败"];
 }
 
 #pragma mark - UITableViewDataSource 

@@ -12,4 +12,4 @@ pwd
 echo "get into xcode model directory..."
 cd ./DataModel/Schema
 echo "generating things..."
-mogenerator --template-var arc=true -m CachingDataModel.xcdatamodeld/CachingDataModel.xcdatamodel/ -M ../Generated/ -H ../Entities/ --includeh ../CachingDataModel.h
+mogenerator --template-var arc=true -m CachingDataModel.xcdatamodeld/CachingDataModel.xcdatamodel/ -M ../Generated/ -H ../Entities/ --includeh ../DataModel.h

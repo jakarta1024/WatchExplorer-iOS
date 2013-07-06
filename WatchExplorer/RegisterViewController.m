@@ -11,8 +11,9 @@
 #import "TKAlertCenter.h"
 //#import "HttpRequestManager.h"
 //#import "UserInfo.h"
-#import "CachingDataModel.h"
+#import "DataModel.h"
 #import "NetworkClient.h"
+#import "ASIHTTPRequest.h"
 
 @interface RegisterViewController ()
 
@@ -73,29 +74,29 @@
         [[TKAlertCenter defaultCenter] postAlertWithMessage:@"邮箱格式错误"];
     }
     else {
-        [[HttpRequestManager sharedManager] registerUser:self.usename.text
-                                                password:self.password.text
-                                                delegate:self
-                                               finishSel:@selector(registerUserFinish:)
-                                                 failSel:@selector(registerUserFail:)];
+//        [[HttpRequestManager sharedManager] registerUser:self.usename.text
+//                                                password:self.password.text
+//                                                delegate:self
+//                                               finishSel:@selector(registerUserFinish:)
+//                                                 failSel:@selector(registerUserFail:)];
     }
 }
 
 - (void)registerUserFinish:(ASIHTTPRequest *)request {
-    NSString *responseString = [request responseString];
-    NSLog(@"autoRegisterFinish : %@", responseString);
-    
-    SBJsonParser *parser = [[SBJsonParser alloc] init];
-    id results = [parser objectWithString:responseString];
-    NSLog(@"results : %@", results);
-    
-    NSString *returnCode = [results objectForKey:@"returnCode"];
-    if ([returnCode isEqualToString:@"1"]) {
-        UserInfo *userInfo = (UserInfo *)[[BSCoreDataManager sharedManager] getObjectOfClass:[UserInfo class]];
-        userInfo.username = self.usename.text;
-        userInfo.password = self.password.text;
-        [[BSCoreDataManager sharedManager] saveContext];
-    }
+//    NSString *responseString = [request responseString];
+//    NSLog(@"autoRegisterFinish : %@", responseString);
+//    
+//    SBJsonParser *parser = [[SBJsonParser alloc] init];
+//    id results = [parser objectWithString:responseString];
+//    NSLog(@"results : %@", results);
+//    
+//    NSString *returnCode = [results objectForKey:@"returnCode"];
+//    if ([returnCode isEqualToString:@"1"]) {
+//        UserInfo *userInfo = (UserInfo *)[[DataModelFactory sharedInstance] getObjectOfClass:[UserInfo class]];
+//        userInfo.username = self.usename.text;
+//        userInfo.password = self.password.text;
+//        [[DataModelFactory sharedInstance] saveContext];
+//    }
 }
 
 - (void)registerUserFail:(ASIHTTPRequest *)request {
