@@ -7,3 +7,6 @@
 [submodule "Externals/ASIHTTPRequest"]
 	path = Externals/ASIHTTPRequest
 	url = git@github.com:pokeb/asi-http-request.git
+[submodule "Externals/MKNetworkKit"]
+	path = Externals/MKNetworkKit
+	url = git@github.com:MugunthKumar/MKNetworkKit.git

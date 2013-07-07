@@ -153,6 +153,17 @@
 		BBE6BDB717882412008FB5FD /* ASIS3Request.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE6BD8217882411008FB5FD /* ASIS3Request.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BBE6BDB817882412008FB5FD /* ASIS3ServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE6BD8417882411008FB5FD /* ASIS3ServiceRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BBE6BDC91788288A008FB5FD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE6BDC817882889008FB5FD /* CFNetwork.framework */; };
+		BBE6BE0517882AB9008FB5FD /* NewsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBE6BE0417882AB9008FB5FD /* NewsView.xib */; };
+		BBE6BE0717882AD1008FB5FD /* NewsDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBE6BE0617882AD1008FB5FD /* NewsDetailView.xib */; };
+		BBE6BE0917882AE4008FB5FD /* RankView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBE6BE0817882AE4008FB5FD /* RankView.xib */; };
+		BBE6BE0B17882B01008FB5FD /* WatchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBE6BE0A17882B01008FB5FD /* WatchView.xib */; };
+		BBE6BE0D17882B0D008FB5FD /* WatchDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBE6BE0C17882B0D008FB5FD /* WatchDetailView.xib */; };
+		BBE6BE0F17882B1D008FB5FD /* WatchListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBE6BE0E17882B1D008FB5FD /* WatchListView.xib */; };
+		BBE6BE1117882B3C008FB5FD /* CommentListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBE6BE1017882B3C008FB5FD /* CommentListView.xib */; };
+		BBE6BE1317882B52008FB5FD /* AddCommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBE6BE1217882B52008FB5FD /* AddCommentView.xib */; };
+		BBE6BE1517882B5D008FB5FD /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBE6BE1417882B5D008FB5FD /* SettingsView.xib */; };
+		BBE6BE1717882B69008FB5FD /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBE6BE1617882B69008FB5FD /* LoginView.xib */; };
+		BBE6BE1917882B74008FB5FD /* RegiesterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBE6BE1817882B74008FB5FD /* RegiesterView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -441,6 +452,17 @@
 		BBE6BD8317882411008FB5FD /* ASIS3ServiceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIS3ServiceRequest.h; sourceTree = "<group>"; };
 		BBE6BD8417882411008FB5FD /* ASIS3ServiceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIS3ServiceRequest.m; sourceTree = "<group>"; };
 		BBE6BDC817882889008FB5FD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		BBE6BE0417882AB9008FB5FD /* NewsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsView.xib; sourceTree = "<group>"; };
+		BBE6BE0617882AD1008FB5FD /* NewsDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsDetailView.xib; sourceTree = "<group>"; };
+		BBE6BE0817882AE4008FB5FD /* RankView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankView.xib; sourceTree = "<group>"; };
+		BBE6BE0A17882B01008FB5FD /* WatchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WatchView.xib; sourceTree = "<group>"; };
+		BBE6BE0C17882B0D008FB5FD /* WatchDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WatchDetailView.xib; sourceTree = "<group>"; };
+		BBE6BE0E17882B1D008FB5FD /* WatchListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WatchListView.xib; sourceTree = "<group>"; };
+		BBE6BE1017882B3C008FB5FD /* CommentListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentListView.xib; sourceTree = "<group>"; };
+		BBE6BE1217882B52008FB5FD /* AddCommentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCommentView.xib; sourceTree = "<group>"; };
+		BBE6BE1417882B5D008FB5FD /* SettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsView.xib; sourceTree = "<group>"; };
+		BBE6BE1617882B69008FB5FD /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		BBE6BE1817882B74008FB5FD /* RegiesterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegiesterView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -809,6 +831,17 @@
 		BB3BE31617475A8800773B16 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				BBE6BE0417882AB9008FB5FD /* NewsView.xib */,
+				BBE6BE0617882AD1008FB5FD /* NewsDetailView.xib */,
+				BBE6BE0817882AE4008FB5FD /* RankView.xib */,
+				BBE6BE0A17882B01008FB5FD /* WatchView.xib */,
+				BBE6BE0C17882B0D008FB5FD /* WatchDetailView.xib */,
+				BBE6BE0E17882B1D008FB5FD /* WatchListView.xib */,
+				BBE6BE1017882B3C008FB5FD /* CommentListView.xib */,
+				BBE6BE1217882B52008FB5FD /* AddCommentView.xib */,
+				BBE6BE1417882B5D008FB5FD /* SettingsView.xib */,
+				BBE6BE1617882B69008FB5FD /* LoginView.xib */,
+				BBE6BE1817882B74008FB5FD /* RegiesterView.xib */,
 			);
 			name = Interfaces;
 			sourceTree = "<group>";
@@ -1019,6 +1052,17 @@
 				BB3BE256174747A600773B16 /* Default@2x.png in Resources */,
 				BB3BE258174747A600773B16 /* Default-568h@2x.png in Resources */,
 				BB3BE2771747487100773B16 /* AKTabBarController.bundle in Resources */,
+				BBE6BE0517882AB9008FB5FD /* NewsView.xib in Resources */,
+				BBE6BE0717882AD1008FB5FD /* NewsDetailView.xib in Resources */,
+				BBE6BE0917882AE4008FB5FD /* RankView.xib in Resources */,
+				BBE6BE0B17882B01008FB5FD /* WatchView.xib in Resources */,
+				BBE6BE0D17882B0D008FB5FD /* WatchDetailView.xib in Resources */,
+				BBE6BE0F17882B1D008FB5FD /* WatchListView.xib in Resources */,
+				BBE6BE1117882B3C008FB5FD /* CommentListView.xib in Resources */,
+				BBE6BE1317882B52008FB5FD /* AddCommentView.xib in Resources */,
+				BBE6BE1517882B5D008FB5FD /* SettingsView.xib in Resources */,
+				BBE6BE1717882B69008FB5FD /* LoginView.xib in Resources */,
+				BBE6BE1917882B74008FB5FD /* RegiesterView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
